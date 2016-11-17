@@ -1,0 +1,125 @@
+ListChoresFromListIntent list chores
+ListChoresFromListIntent list the chores
+ListChoresFromListIntent what are the chores
+ListChoresFromListIntent tell me the chores
+ListChoresFromListIntent tell me what the chores are
+
+
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to the chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to the chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to the chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to the chores list
+
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation}  to the chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation}  to the chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to the chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to the chores list
+
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to chores
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to the chores
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to the chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to the chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to the chores list
+
+
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} {ChoreObject} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} {ChoreObject} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} {ChoreObject} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} {ChoreObject} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} {ChoreObject} from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} {ChoreObject} from the chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} {ChoreObject} from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} {ChoreObject} from the chores list
+
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation}  from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation}  from the chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreLocation} from the chores list
+
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreObject} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreObject} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreObject} from chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreObject} from chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreObject} from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreObject} from the chores list
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreObject} from the chores
+RemoveChoreFromListIntent Remove {ChoreVerb} the {ChoreObject} from the chores list
+
+RemoveChoreFromListIntent {ChoreVerb} {ChoreLocation} {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} {ChoreLocation} {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreLocation} {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreLocation} {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreLocation} {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreLocation} {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreLocation} {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreLocation} {ChoreObject} is done
+RemoveChoreFromListIntent i finished {ChoreVerb} ing {ChoreLocation} {ChoreObject}
+RemoveChoreFromListIntent i finished {ChoreVerb} ing the {ChoreLocation} {ChoreObject}
+
+RemoveChoreFromListIntent {ChoreVerb} {ChoreLocation} is finished
+RemoveChoreFromListIntent {ChoreVerb} {ChoreLocation} is done
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreLocation} is finished
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreLocation} is done
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreLocation} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreLocation} is done
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreLocation} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreLocation} is done
+RemoveChoreFromListIntent finished {ChoreVerb} ing {ChoreLocation}
+RemoveChoreFromListIntent finished {ChoreVerb} ing the {ChoreLocation}
+
+RemoveChoreFromListIntent {ChoreVerb} {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} the {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing {ChoreObject} is done
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreObject} is finished
+RemoveChoreFromListIntent {ChoreVerb} ing the {ChoreObject} is done
+RemoveChoreFromListIntent finished {ChoreVerb} ing {ChoreObject}
+RemoveChoreFromListIntent finished {ChoreVerb} ing the {ChoreObject}
+
+FirstChoreFromListIntent what's the first chore
+FirstChoreFromListIntent give me the first chore
+FirstChoreFromListIntent first chore
+FirstChoreFromListIntent first chore from list
+FirstChoreFromListIntent tell me the first chore
+
+RandomChoreFromListIntent give me a chore
+RandomChoreFromListIntent give me a random chore
+RandomChoreFromListIntent tell me a chore
+RandomChoreFromListIntent I need a chore
+RandomChoreFromListIntent tell me a random chore
+RandomChoreFromListIntent I need a random chore
+RandomChoreFromListIntent give me another chore
+RandomChoreFromListIntent give me another random chore
+RandomChoreFromListIntent tell me another chore
+RandomChoreFromListIntent I need another chore
+RandomChoreFromListIntent tell me another random chore
+RandomChoreFromListIntent I need another random chore
+RandomChoreFromListIntent give me a different chore
+RandomChoreFromListIntent give me a different random chore
+RandomChoreFromListIntent tell me a different chore
+RandomChoreFromListIntent I need a different chore
+RandomChoreFromListIntent tell me a different random chore
+RandomChoreFromListIntent I need a different random chore
+
+NextChoreFromListIntent what's the next chore
+NextChoreFromListIntent give me the next chore
+NextChoreFromListIntent next
+NextChoreFromListIntent next chore
+NextChoreFromListIntent tell me the next chore

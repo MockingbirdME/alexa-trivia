@@ -1,0 +1,71 @@
+{
+  "intents": [
+    {
+      "intent": "ListChoresFromListIntent"
+    },
+    {
+      "intent": "AddChoreToListIntent",
+      "slots": [
+        {
+          "name": "ChoreVerb",
+          "type": "LIST_OF_CHORE_VERBS"
+        },
+        {
+          "name": "ChoreLocation",
+          "type": "LIST_OF_CHORE_LOCATIONS"
+        },
+        {
+          "name": "ChoreObject",
+          "type": "LIST_OF_CHORE_OBJECTS"
+        }
+      ]
+    },
+    {
+      "intent": "RemoveChoreFromListIntent",
+      "slots": [
+        {
+          "name": "ChoreVerb",
+          "type": "LIST_OF_CHORE_VERBS"
+        },
+        {
+          "name": "ChoreLocation",
+          "type": "LIST_OF_CHORE_LOCATIONS"
+        },
+        {
+          "name": "ChoreObject",
+          "type": "LIST_OF_CHORE_OBJECTS"
+        }
+      ]
+    },
+    {
+      "intent": "FirstChoreFromListIntent"
+    },
+    {
+      "intent": "RandomChoreFromListIntent"
+    },
+    {
+      "intent": "NextChoreFromListIntent"
+    },
+    {
+      "intent": "AMAZON.StartOverIntent"
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
