@@ -13,7 +13,7 @@ var storage = (function () {
         } else {
             this.data = {
                 listedChores: [],
-                currentChore:
+                currentChore: null
             };
         }
         this._session = session;

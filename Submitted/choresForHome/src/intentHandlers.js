@@ -1,13 +1,3 @@
-/**
-    Copyright 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
-        http://aws.amazon.com/apache2.0/
-
-    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-*/
-
 'use strict';
 var textHelper = require('./textHelper'),
     storage = require('./storage');
@@ -21,7 +11,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
           return;
         } else {
           var speechOutput = "Your chores are ";
-          currentChoreList.data.listedChores.forEach(fuction(value){
+          currentChoreList.data.listedChores.forEach(function(value){
             speechOutput += (value + '. ');
           });
           response.tell(speechOutput);
@@ -122,13 +112,13 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
       storage.loadChoreList(session, function(currentChoreList) {
         if (currentChoreList.data.listedChores.length === 0) {
           response.tell('Your chore list is currently empty.');
-        } else if (currentChoreList.data.currentChore === (currentChoreList.data.listedChores.length -1)) {
+        } else if (currentChoreList.data.currentChore === (currentChoreList.data.listedChores.length - 1)) {
           response.tell(currentChoreList.data.listedChores[currentChoreList.data.currentChore] + 'is the last chore on your list');
         } else {
           currentChoreList.data.currentChore += 1;
           currentChoreList.save(function(){
             response.tell('Your next chore is: ' + currentChoreList.data.listedChores[choreIndex]);
-          })
+          });
         }
         return;
       });
