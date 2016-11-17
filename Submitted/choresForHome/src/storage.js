@@ -23,6 +23,7 @@ var storage = (function () {
         } else {
             this.data = {
                 listedChores: [],
+                currentChore:
             };
         }
         this._session = session;
