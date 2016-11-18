@@ -1,6 +1,7 @@
 ListChoresFromListIntent list chores
 ListChoresFromListIntent list the chores
 ListChoresFromListIntent what are the chores
+ListChoresFromListIntent what my chores are
 ListChoresFromListIntent tell me the chores
 ListChoresFromListIntent tell me what the chores are
 
@@ -13,6 +14,11 @@ AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to the chores
 AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to the chores list
 AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to the chores
 AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to the chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to my chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} {ChoreObject} to my chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to my chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} {ChoreObject} to my chores list
+
 
 AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to chores
 AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to chores list
@@ -22,6 +28,10 @@ AddChoreToListIntent add {ChoreVerb} {ChoreLocation}  to the chores
 AddChoreToListIntent add {ChoreVerb} {ChoreLocation}  to the chores list
 AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to the chores
 AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to the chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to my chores
+AddChoreToListIntent add {ChoreVerb} {ChoreLocation} to my chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to my chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreLocation} to my chores list
 
 AddChoreToListIntent add {ChoreVerb} {ChoreObject} to chores
 AddChoreToListIntent add {ChoreVerb} {ChoreObject} to chores list
@@ -31,6 +41,10 @@ AddChoreToListIntent add {ChoreVerb} {ChoreObject} to the chores
 AddChoreToListIntent add {ChoreVerb} {ChoreObject} to the chores list
 AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to the chores
 AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to the chores list
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to my chores
+AddChoreToListIntent add {ChoreVerb} {ChoreObject} to my chores list
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to my chores
+AddChoreToListIntent add {ChoreVerb} the {ChoreObject} to my chores list
 
 
 RemoveChoreFromListIntent Remove {ChoreVerb} {ChoreLocation} {ChoreObject} from chores

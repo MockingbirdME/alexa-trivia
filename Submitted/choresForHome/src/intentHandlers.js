@@ -1,3 +1,4 @@
+//jshint node:true
 'use strict';
 var textHelper = require('./textHelper'),
     storage = require('./storage');
@@ -29,7 +30,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         return;
       }
       storage.loadChoreList(session, function(currentChoreList){
-        var newChoreName = newChoreVerb + ' the'
+        var newChoreName = newChoreVerb + ' the';
         if (newChoreLocation) {
           newChoreName =+ ' ' + newChoreLocation;
         }
@@ -57,7 +58,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         return;
       }
       storage.loadChoreList(session, function(currentChoreList){
-        var newChoreName = newChoreVerb + ' the'
+        var newChoreName = newChoreVerb + ' the';
         if (newChoreLocation) {
           newChoreName =+ ' ' + newChoreLocation;
         }
@@ -69,7 +70,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
           currentChoreList.data.listedChores.splice(index, 1);
           currentChoreList.save(function(){
             response.tell(newChoreName + ' is no longer on your list of chores to do.');
-          })
+          });
           return;
         } else {
             response.tell(newChoreName + ' is not on your chore list, you can add it to your chore list by saying add' + newChoreName + ' to my chores list.');
@@ -86,7 +87,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
           currentChoreList.data.currentChore = 0;
           currentChoreList.save(function(){
             response.tell('Your first chore is: ' + currentChoreList.data.listedChores[0]);
-          })
+          });
 
         }
         return;
@@ -102,7 +103,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
           currentChoreList.data.currentChore = choreIndex;
           currentChoreList.save(function(){
             response.tell('Your chore is: ' + currentChoreList.data.listedChores[choreIndex]);
-          })
+          });
         }
         return;
       });
@@ -117,7 +118,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         } else {
           currentChoreList.data.currentChore += 1;
           currentChoreList.save(function(){
-            response.tell('Your next chore is: ' + currentChoreList.data.listedChores[choreIndex]);
+            response.tell('Your next chore is: ' + currentChoreList.data.listedChores[currentChoreList.data.currentChore]);
           });
         }
         return;

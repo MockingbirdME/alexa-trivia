@@ -8,6 +8,8 @@
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
+/* jshint node: true */
+
 'use strict';
 
 function AlexaSkill(appId) {
@@ -17,7 +19,7 @@ function AlexaSkill(appId) {
 AlexaSkill.speechOutputType = {
     PLAIN_TEXT: 'PlainText',
     SSML: 'SSML'
-}
+};
 
 AlexaSkill.prototype.requestHandlers = {
     LaunchRequest: function (event, context, response) {
@@ -87,8 +89,7 @@ AlexaSkill.prototype.execute = function (event, context) {
 
         // Validate that this request originated from authorized source.
         if (this._appId && event.session.application.applicationId !== this._appId) {
-            console.log("The applicationIds don't match : " + event.session.application.applicationId + " and "
-                + this._appId);
+            console.log("The applicationIds don't match : " + event.session.application.applicationId + " and " + this._appId);
             throw "Invalid applicationId";
         }
 
@@ -124,7 +125,7 @@ function createSpeechObject(optionsParam) {
         return {
             type: optionsParam.type || 'PlainText',
             text: optionsParam.speech || optionsParam
-        }
+        };
     }
 }
 

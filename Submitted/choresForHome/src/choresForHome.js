@@ -1,4 +1,4 @@
-
+// jshint node: true
 'use strict';
 var AlexaSkill = require('./AlexaSkill'),
     eventHandlers = require('./eventHandlers'),

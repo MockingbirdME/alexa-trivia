@@ -1,3 +1,4 @@
+// jshint node: true
 'use strict';
 var AWS = require("aws-sdk");
 
@@ -24,7 +25,11 @@ var storage = (function () {
             //check if there are no listed chores,
             var noChores = true;
             var choresData = this.data;
-            choresData.listedChores.length == 0 ? noChores = true : noChores = false;
+            if (choresData.listedChores.length === 0){
+              noChores = true;
+            } else {
+              noChores = false;
+            }
             return noChores;
         },
         save: function (callback) {
