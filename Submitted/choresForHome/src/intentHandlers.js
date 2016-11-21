@@ -22,32 +22,35 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
     };
 
     intentHandlers.AddChoreToListIntent = function (intent, session, response) {
-      var newChoreVerb = textHelper.getChorePart(intent.slots.ChoreVerb.value);
-      var newChoreLocation = textHelper.getChorePart(intent.slots.ChoreLocation.value);
-      var newChoreObject = textHelper.getChorePart(intent.slots.ChoreObject.value);
 
-      if (!newChoreVerb || (!newChoreLocation && !newChoreObject)) {
-        response.ask('I\'m sorry, I didn\'t catch that; what chore would you like to add?', 'What chore do you want to add?');
-        return;
-      }
+
+
+
       storage.loadChoreList(session, function(currentChoreList){
+        var newChoreVerb = textHelper.getChorePart(intent.slots.ChoreVerb.value);
+        var newChoreLocation = textHelper.getChorePart(intent.slots.ChoreLocation.value);
+        var newChoreObject = textHelper.getChorePart(intent.slots.ChoreObject.value);
+
+        if (!newChoreVerb || (!newChoreLocation && !newChoreObject)) {
+          response.ask('I\'m sorry, I didn\'t catch that; what chore would you like to add?', 'What chore do you want to add?');
+          return;
+        }
+
         var newChoreName = newChoreVerb + ' the';
         if (newChoreLocation) {
-          newChoreName =+ ' ' + newChoreLocation;
+          newChoreName += ' ' + newChoreLocation;
         }
         if (newChoreObject) {
           newChoreName += ' ' + newChoreObject;
         }
-        if (currentChoreList.data.listedChores.includes(newChoreName)) {
-          response.tell(newChoreName + ' is already on your list of chores to do.');
-          return;
-        }
         currentChoreList.data.listedChores.push(newChoreName);
+
         currentChoreList.save(function() {
-          response.tell(newChoreName + ' has been added to your chore list.');
+          response.tell(newChoreName + ' has been added to your chore list. 13');
         });
-        return;
+
       });
+
     };
 
     intentHandlers.RemoveChoreFromListIntent = function (intent, session, response) {
