@@ -23,7 +23,7 @@ var storage = (function () {
     ChoreList.prototype = {
         isEmptyList: function () {
             //check if there are no listed chores,
-            var noChores = true;
+            var noChores = null;
             var choresData = this.data;
             if (choresData.listedChores.length === 0){
               noChores = true;

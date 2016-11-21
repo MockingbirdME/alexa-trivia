@@ -16,6 +16,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
             speechOutput += (value + '. ');
           });
           response.tell(speechOutput);
+          return;
         }
       });
     };
@@ -45,6 +46,7 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
         currentChoreList.save(function() {
           response.tell(newChoreName + ' has been added to your chore list.');
         });
+        return;
       });
     };
 
@@ -83,13 +85,14 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
       storage.loadChoreList(session, function(currentChoreList) {
         if (currentChoreList.data.listedChores.length === 0) {
           response.tell('Your chore list is currently empty.');
+          return;
         } else {
           currentChoreList.data.currentChore = 0;
-          currentChoreList.save(function(){
-            response.tell('Your first chore is: ' + currentChoreList.data.listedChores[0]);
-          });
-
         }
+
+        currentChoreList.save(function(){
+          response.tell('Your first chore is: ' + currentChoreList.data.listedChores[0]);
+        });
         return;
       });
     };
@@ -98,13 +101,21 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
       storage.loadChoreList(session, function(currentChoreList) {
         if (currentChoreList.data.listedChores.length === 0) {
           response.tell('Your chore list is currently empty.');
+          return;
+        } else if (currentChoreList.data.listedChores.length === 1){
+          response.tell(currentChoreList.data.listedChores[0] + ' is the only chore on your chore list');
+          return;
         } else {
-          var choreIndex = Math.floor(Math.random() * currentChoreList.data.listedChores.length) + 1;
+          var choreIndex = Math.floor(Math.random() * currentChoreList.data.listedChores.length);
+          while (choreIndex === currentChoreList.data.currentChore) {
+            choreIndex = Math.floor(Math.random() * currentChoreList.data.listedChores.length);
+          }
           currentChoreList.data.currentChore = choreIndex;
-          currentChoreList.save(function(){
-            response.tell('Your chore is: ' + currentChoreList.data.listedChores[choreIndex]);
-          });
         }
+        currentChoreList.save(function(){
+          response.tell('Your chore is: ' + currentChoreList.data.listedChores[choreIndex]);
+        });
+
         return;
       });
     };
@@ -113,6 +124,13 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
       storage.loadChoreList(session, function(currentChoreList) {
         if (currentChoreList.data.listedChores.length === 0) {
           response.tell('Your chore list is currently empty.');
+        } else if (currentChoreList.data.currentChore === null) {
+          currentChoreList.data.currentChore = 0;
+          currentChoreList.save(function(){
+            response.tell('Your next chore is: ' + currentChoreList.data.listedChores[currentChoreList.data.currentChore]);
+          });
+        } else if (currentChoreList.data.listedChores.length === 1) {
+          response.tell(currentChoreList.data.listedChores[0] + "is the only chore on the chores list, you can add chores to the list by saying add the chore to chores list");
         } else if (currentChoreList.data.currentChore === (currentChoreList.data.listedChores.length - 1)) {
           response.tell(currentChoreList.data.listedChores[currentChoreList.data.currentChore] + 'is the last chore on your list');
         } else {
