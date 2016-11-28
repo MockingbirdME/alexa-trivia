@@ -22,20 +22,14 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
     };
 
     intentHandlers.AddChoreToListIntent = function (intent, session, response) {
-
-
-
-
       storage.loadChoreList(session, function(currentChoreList){
         var newChoreVerb = textHelper.getChorePart(intent.slots.ChoreVerb.value);
         var newChoreLocation = textHelper.getChorePart(intent.slots.ChoreLocation.value);
         var newChoreObject = textHelper.getChorePart(intent.slots.ChoreObject.value);
-
         if (!newChoreVerb || (!newChoreLocation && !newChoreObject)) {
           response.ask('I\'m sorry, I didn\'t catch that; what chore would you like to add?', 'What chore do you want to add?');
           return;
         }
-
         var newChoreName = newChoreVerb + ' the';
         if (newChoreLocation) {
           newChoreName += ' ' + newChoreLocation;
@@ -44,13 +38,10 @@ var registerIntentHandlers = function (intentHandlers, skillContext) {
           newChoreName += ' ' + newChoreObject;
         }
         currentChoreList.data.listedChores.push(newChoreName);
-
         currentChoreList.save(function() {
-          response.tell(newChoreName + ' has been added to your chore list. 13');
+          response.tell(newChoreName + ' has been added to your chore list.');
         });
-
       });
-
     };
 
     intentHandlers.RemoveChoreFromListIntent = function (intent, session, response) {
